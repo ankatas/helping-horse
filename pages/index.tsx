@@ -7,6 +7,7 @@ import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 type Props = {
   allPosts: Post[]
@@ -40,7 +41,7 @@ export default function Index({ allPosts }: Props) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const allPosts = getAllPosts([
     'title',
     'date',
@@ -51,6 +52,9 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: {
+      allPosts,
+      ...(await serverSideTranslations(locale, ['common']))
+    },
   }
 }

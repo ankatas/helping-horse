@@ -1,8 +1,6 @@
-import { AppProps } from "next/app";
-import "../styles/index.css";
+import '../styles/index.css';
+import { appWithTranslation } from 'next-i18next';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
-}
-
-// https://adrserr.com/blog/i18n-typescript-next
+export default appWithTranslation(({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
+});
