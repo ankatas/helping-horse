@@ -1,10 +1,11 @@
 {
-    "header": {
-      "about": "hhh",
-      "home": "h",
-      "blog": "h"
-    },
-    "index": {
-      "title": "hhhhhhhhh 🤟🏽"
-    }
+  "header": {
+    "about": "hhh",
+    "home": "h",
+    "blog": "h"
+  },
+  "index": {
+    "tagline": "A passionate equestrian hobby club",
+    "introButton": "Find out more"
   }
+}

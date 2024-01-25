@@ -2,9 +2,10 @@
   "header": {
     "about": "About",
     "home": "Home",
-    "blog": "Blogggg"
+    "blog": "Blog"
   },
   "index": {
-    "title": "Hello, I'm Adrián Serrano 🤟🏽"
+    "tagline": "A passionate equestrian hobby club",
+    "introButton": "Find out more"
   }
 }
